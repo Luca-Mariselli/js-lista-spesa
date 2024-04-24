@@ -17,11 +17,16 @@ let lista = [
     `frutta`,
     `verdura`,
     `pane`,
-    `carne`
+    `carne`,
+    `zucchero`,
+    `sottaceti`
 ]
 
-// stampo array in console
-console.log(lista)
+// aggiungo collegamento alla mia ul
+const listaPg = document.getElementById(`lista`);
+
+// // stampo array in console
+// console.log(lista)
 
 // // creo ciclo for per stampare array in console
 // for(let i = 0; i < lista.length; i++){
@@ -33,6 +38,14 @@ console.log(lista)
 let i = 0
 while(i < lista.length){
     const oggetto = lista[i]
-    console.log(i, oggetto)
+
+    // // stampo in pagina con innerHtml
+    // listaPg.innerHTML += `<li>${oggetto}</li>`
+
+    // stampo in pagina con append
+    const liElement = document.createElement(`li`);
+    liElement.innerText = oggetto;
+    listaPg.append(liElement)
+        
     i++
 }
