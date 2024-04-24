@@ -23,9 +23,16 @@ let lista = [
 // stampo array in console
 console.log(lista)
 
-// creo ciclo for per stampare array in console
-for(let i = 0; i < lista.length; i++){
+// // creo ciclo for per stampare array in console
+// for(let i = 0; i < lista.length; i++){
+//     const oggetto = lista[i]
+//     console.log(i, oggetto)
+// }
+
+// trasformo il for in while
+let i = 0
+while(i < lista.length){
     const oggetto = lista[i]
     console.log(i, oggetto)
+    i++
 }
-
